@@ -1,0 +1,6 @@
+# エラーログの集計から除外するパターン（1行1正規表現）。ignore.txt にコピーして編集する
+# 「プログラム名: 本文」に対して検索する（re.search）。I/O エラーと OOM には適用しない
+^dbus-broker-launch: Ignoring duplicate name
+^gdm-password\]?: gkr-pam: unable to locate daemon control file
+^gdm: GLib: Source ID \d+ was not found
+WARNING: convert_pos\(\) in njd2jpcommon\.c
