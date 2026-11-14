@@ -1,0 +1,27 @@
+# ゴミ出しカレンダー。calendar.toml にコピーして編集する
+# 曜日: Mon Tue Wed Thu Fri Sat Sun
+
+# 何時までに出すか（必須、HH:MM）
+deadline = "08:00"
+
+[[rule]]
+name     = "燃やすごみ"
+weekdays = ["Tue", "Fri"]          # 毎週
+
+[[rule]]
+name     = "資源ごみ"
+weekdays = ["Wed"]
+
+[[rule]]
+name     = "小型金属類"
+weekdays = ["Thu"]
+nth      = [2]                     # 第2木曜（月の中で2回目の木曜）
+
+# 年末年始などの変更
+[[exception]]
+date = "2026-12-31"
+skip = ["燃やすごみ"]               # この日は収集しない
+
+[[exception]]
+date = "2027-01-04"
+add  = ["燃やすごみ"]               # この日に収集する
